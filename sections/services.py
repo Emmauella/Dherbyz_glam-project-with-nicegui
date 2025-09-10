@@ -37,6 +37,9 @@ def render():
     with ui.element("div").classes('min-h-screen w-full bg-rose-200 flex flex-col items-center px-20 py-20'
         "w-screen h-screen flex flex-col bg-cover bg-center items-center justify-center bg-black/20 p-0 bg-black/300"
     ):
+        with ui.row().classes("justify-center mt-4"):
+            ui.label("Our Services").classes("text-3xl font-poppins text-pink")
+            
         with ui.label("Our Services").classes('texl-3xl justify-center font-poppins text-pink mt-4'):
            with ui.row().classes('gap-10 flex-wrap justify-center flex'):
             

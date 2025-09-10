@@ -5,7 +5,7 @@ def render():
     # Big container
     with ui.element("div").style("background-image: url('/assets/facecard.jpg')").classes("h-screen w-screen flex flex-col bg-cover bg-center items-center justify-center p-0"):
         # Navbar
-        with ui.element("nav").classes("flex flex-row justify-between items-center fixed left-0 w-full top-0 px-20 py-5"):
+        with ui.element("nav").classes("flex flex-row justify-between items-center fixed z-10 bg-pink-200/60 left-0 w-full top-0 px-20 py-5"):
 
             # LOGO
             # ui.label("LOGO").classes("font-bold text-2xl text-pink")
