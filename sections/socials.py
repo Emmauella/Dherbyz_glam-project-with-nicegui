@@ -27,6 +27,4 @@ def render():
                     "text-xl shadow-md hover:opacity-80 transition"
                 ) \
                 .tooltip(name)   # shows tooltip on hover
-
-    render()
     

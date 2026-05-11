@@ -39,15 +39,23 @@
 from nicegui import ui
 
 def render():
-    with ui.element("div").style("background-image: url('/assets/bg.jpg')").classes(
-        "w-screen h-screen flex flex-col bg-cover bg-center items-center justify-center bg-black/30 p-0 bg-black/300"
-    ):
-        with ui.row().classes('gap-10 flex-wrap justify-center flex'):
-            
-            # First card
-            with ui.column().classes('items-center'):
-                ui.card().classes('w-80 h-60 shadow-xl rounded-2xl bg-[url("/assets/exp2.jpg")] bg-cover bg-center')
-                ui.label('Makeup Expo').classes('text-xl font-poppins text-pink mt-4')
+    with ui.element("div").classes('min-h-screen w-full bg-pink-100 flex flex-col items-center px-20 py-20').props('id=booking'):
+        ui.label("Book Your Appointment").classes("text-4xl font-bold text-pink-600 mb-10")
+
+        with ui.card().classes('p-8 shadow-lg rounded-2xl bg-white/90 backdrop-blur-sm border border-pink-100 max-w-2xl w-full'):
+            ui.label("Select Service").classes('text-2xl font-semibold text-pink-600 mb-4')
+            service_select = ui.select(['Makeup', 'Hair Styling', 'Nails', 'Lashes', 'Facial'], value='Makeup').classes('w-full mb-4')
+
+            ui.label("Choose Date & Time").classes('text-2xl font-semibold text-pink-600 mb-4')
+            date_picker = ui.date().classes('w-full mb-4')
+            time_select = ui.select(['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM', '4:00 PM'], value='9:00 AM').classes('w-full mb-4')
+
+            ui.label("Your Details").classes('text-2xl font-semibold text-pink-600 mb-4')
+            name_input = ui.input('Full Name').classes('w-full mb-4')
+            phone_input = ui.input('Phone Number').classes('w-full mb-4')
+            email_input = ui.input('Email').classes('w-full mb-4')
+
+            ui.button("Book Appointment", color='pink').classes('w-full text-lg py-3').on_click(lambda: ui.notify('Booking confirmed!', type='positive'))
 
             # Second card
             with ui.column().classes('items-center'):
