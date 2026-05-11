@@ -48,7 +48,7 @@ def contact_page():
 
 def render_navbar():
     """Render the navbar for individual pages"""
-    with ui.element("nav").classes("flex flex-row justify-between items-center fixed z-10 bg-pink-200/60 left-0 w-full top-0 px-20 py-5"):
+    with ui.element("nav").classes("flex flex-row justify-between items-center fixed z-50 bg-white left-0 w-full h-[80px] top-0 px-20 py-5 shadow-xl border-b border-pink-100"):
         # LOGO
         ui.image("/assets/card.jpg").classes("h-[50px] w-[50px] border-2 rounded-full")
 
